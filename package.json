@@ -1,0 +1,31 @@
+{
+    "license": "MIT",
+    "author": "Daniil Sitdikov",
+    "description": "Algorithm implementations for Sedgewick Coursera lessons",
+    "scripts": {
+        "test": "jest",
+        "lint": "eslint **/*.ts"
+    },
+    "lint-staged": {
+        "*.{ts}": [
+            "yarn lint",
+            "git add"
+        ]
+    },
+    "husky": {
+        "hooks": {
+            "pre-push": "yarn test",
+            "pre-commit": "lint-staged"
+        }
+    },
+    "devDependencies": {
+        "@eigenspace/codestyle": "3.0.1",
+        "@types/jest": "24.0.23",
+        "eslint": "5.16.0",
+        "eslint-plugin-eigenspace-script": "latest",
+        "jest": "24.9.0",
+        "husky": "2.3.0",
+        "ts-jest": "24.2.0",
+        "typescript": "3.7.3"
+    }
+}

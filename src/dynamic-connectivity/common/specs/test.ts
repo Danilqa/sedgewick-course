@@ -15,11 +15,26 @@ export function testConnectivityProblem(name: string, clusterClass: IConnectivit
         });
 
         it('should connect 3 sets of points', () => {
-            const actual = new clusterClass(5);
+            const actual = new clusterClass(10000);
 
+            // eslint-disable-next-line no-console
+            console.time(name);
             actual.connect(0, 1);
             actual.connect(1, 2);
             actual.connect(3, 4);
+
+            for (let i = 10; i < 2000; i++) {
+                actual.connect(i, i + 1);
+            }
+
+            for (let i = 2000; i < 3000; i++) {
+                actual.connect(i, i + 1);
+            }
+
+            actual.connect(11, 2100);
+
+            // eslint-disable-next-line no-console
+            console.timeEnd(name);
 
             expect(actual.isConnected(0, 1)).toBeTruthy();
             expect(actual.isConnected(1, 2)).toBeTruthy();

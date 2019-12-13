@@ -29,7 +29,7 @@ export class QuickUnionWeightedCluster implements IConnectivityCluster {
         }
 
         const isRootALighterThanB = this.weights[rootA] < this.weights[rootB];
-        const [parentRoot, childRoot] = isRootALighterThanB ? [rootA, rootB] : [rootB, rootA];
+        const [childRoot, parentRoot] = isRootALighterThanB ? [rootA, rootB] : [rootB, rootA];
         this.weights[parentRoot] += this.weights[childRoot];
 
         this.data[childRoot] = parentRoot;

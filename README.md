@@ -8,3 +8,4 @@
         - [x] Quick union
         - [x] Quick union weighted
         - [x] Quick union with path compression
+        - [x] Social network

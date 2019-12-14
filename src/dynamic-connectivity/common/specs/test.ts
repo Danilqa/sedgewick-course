@@ -17,8 +17,8 @@ export function testConnectivityProblem(name: string, clusterClass: IConnectivit
         it('should connect 3 sets of points', () => {
             const actual = new clusterClass(10000);
 
-            // eslint-disable-next-line no-console
             console.time(name);
+
             actual.connect(0, 1);
             actual.connect(1, 2);
             actual.connect(3, 4);
@@ -33,7 +33,6 @@ export function testConnectivityProblem(name: string, clusterClass: IConnectivit
 
             actual.connect(11, 2100);
 
-            // eslint-disable-next-line no-console
             console.timeEnd(name);
 
             expect(actual.isConnected(0, 1)).toBeTruthy();

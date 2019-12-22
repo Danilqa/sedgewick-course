@@ -9,3 +9,5 @@
         - [x] Quick union weighted
         - [x] Quick union with path compression
         - [x] Social network
+        - [ ] Union-find with specific canonical element (find returns max)
+        - [ ] Successor with delete

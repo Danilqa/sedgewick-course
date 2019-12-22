@@ -21,11 +21,15 @@
     "devDependencies": {
         "@eigenspace/codestyle": "3.0.1",
         "@types/jest": "24.0.23",
+        "@types/ramda": "0.26.38",
         "eslint": "5.16.0",
         "eslint-plugin-eigenspace-script": "latest",
-        "jest": "24.9.0",
         "husky": "2.3.0",
+        "jest": "24.9.0",
         "ts-jest": "24.2.0",
         "typescript": "3.7.3"
+    },
+    "dependencies": {
+        "ramda": "0.26.1"
     }
 }

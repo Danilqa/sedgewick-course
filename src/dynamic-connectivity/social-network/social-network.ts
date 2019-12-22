@@ -1,5 +1,6 @@
 export type FriendshipLog = [number, number];
 
+// TODO: Fix
 export class SocialNetwork {
     private weights: number[] = [];
     private members: number[] = [];
